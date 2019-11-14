@@ -1,50 +1,17 @@
 # All the News That's Fit to Scrape
 
-### Overview
+Users can view and leave comments on the latest news using mongojs and Cheerio to scrape news from another site.
 
-Creates a web app that lets users view and leave comments on the latest news. You will flex your mongojs and Cheerio muscles to scrape news from another site.
-
-1. Create a GitHub repo created for this assignment and clone it to your computer. Any name will do -- just make sure it's related to this project in some fashion.
-
-2. Run `npm init`. When that's finished, install and save these npm packages:
-
-3. express
-
-4. ejs
-
-5. mongojs
-
-6. body-parser
-
-7. cheerio
-
-8. request
-
-14. [Watch this demo of a possible submission](mongo-homework-demo.mov)
-
-15. Your site doesn't need to match the demo's style, but feel free to attempt something similar if you'd like. Otherwise, just be creative!
-
-### Submission on BCS
-
-* Please submit the link to the Github Repository!
-
-## Instructions
-
-* Create an app that accomplishes the following:
-
-  1. Whenever a user visits your site, the app should scrape stories from a news outlet of your choice and display them for the user. Each scraped article should be saved to your application database. At a minimum, the app should scrape and display the following information for each article:
+This app scrapes stories from PBS News Hour and displays them. Each scraped is saved to the database. 
+The app scrapes and displays the following information for each article:
 
      * Headline - the title of the article
-
      * Summary - a short summary of the article
-
      * URL - the url to the original article
+     * Photos
+     * Bylines
 
-     * Feel free to add more content to your database (photos, bylines, and so on).
-
-  2. Users should also be able to leave comments on the articles displayed and revisit them later. The comments should be saved to the database as well and associated with their articles. Users should also be able to delete comments left on articles. All stored comments should be visible to every user.
-
-* Beyond these requirements, be creative and have fun with this!
+  2. Users may leave comments on the articles displayed and revisit them later. Comments are saved to the database and associated with their articles. Users may delete comments left on articles. All stored comments are visible to every user.
 
 ### Tips
 

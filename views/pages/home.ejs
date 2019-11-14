@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>All The News Fit To Scrape</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1 id="navbar-brand">All The News Fit To Scrape</h1>
+            <nav class="navbar">
+                <ul id="navbar-nav" class="hidden">
+                    <li class="nav-item">
+                        <form method="post" action="/scrape" >
+                            <input type="submit" value="Scrape">
+                        </form>
+                     </li>
+                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="articles">
+        <div class="container">
+            <ul class="articles">
+                <% for (var i =0; i < articles.length; i++) { %>
+                <li>
+                    <h2><a href="<%= articles[i].url %>"><%= articles[i].title %></a></h2>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        Copyright © Kevin Burns
+    </footer>
+    <script type="text/javascript">
+
+    </script>
+</body>
+
+</html>
