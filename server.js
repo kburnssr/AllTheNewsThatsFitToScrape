@@ -47,7 +47,12 @@ app.post("/scrape", function(req, res) {
         });
      
         for(i in data){
-            db.articles.insert({votes: 0, title: data[i].title, url : data[i].link});
+            db.articles.find({ url: data[i].url }).count(function (error, count) {
+                if (count > 0) {
+                    return;
+                }
+                db.articles.insert({votes: 0, title: data[i].title, url : data[i].link});
+            });
         }   
         res.redirect("/");
       })
