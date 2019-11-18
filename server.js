@@ -9,7 +9,6 @@ var app = express();
 app.set('view engine', 'ejs');
 //making static assets
 app.use(express.static("public"));
-//app.use(bodyParser());
 
 // Database configuration
 var databaseUrl = process.env.MONGODB_URI || "news_db";
@@ -62,6 +61,7 @@ app.post("/scrape", function(req, res) {
       })
 
   });
+
 app.listen(5000, function(){
 	console.log('listening on 5000');
 });
