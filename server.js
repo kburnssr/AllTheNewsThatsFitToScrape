@@ -46,14 +46,14 @@ app.post("/scrape", function(req, res) {
         });
      
         data.forEach(function(el) {
-            db.articles.find({ url: el.url }).count(function (error, count) {
+            db.articles.find({ url: el.link }).count(function (error, count) {
                 if (count > 0) {
                     return;
                 }
                 db.articles.insert({votes: 0, title: el.title, url : el.link});
             });
-            res.redirect("/");
         });
+        res.redirect("/");
       })
       .catch(error => {
         console.log(error);
