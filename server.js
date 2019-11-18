@@ -62,6 +62,6 @@ app.post("/scrape", function(req, res) {
 
   });
 
-app.listen(5000, function(){
-	console.log('listening on 5000');
+app.listen(PORT, function(){
+	console.log('listening on '+PORT);
 });
